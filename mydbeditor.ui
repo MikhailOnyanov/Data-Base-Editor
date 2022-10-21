@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>803</width>
+    <height>539</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>0</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>QListWidget</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>781</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QListWidget" name="listWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>150</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="autoScroll">
+        <bool>true</bool>
+       </property>
+       <property name="tabKeyNavigation">
+        <bool>false</bool>
+       </property>
+       <property name="dragEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectItems</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>621</width>
+          <height>401</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>Create table</string>
+         </attribute>
+         <widget class="QPushButton" name="create_table_push_button">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>310</y>
+            <width>591</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Create table</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>10</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Table name</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="table_name_line">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>10</y>
+            <width>281</width>
+            <height>20</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="primaryKeyComboBox">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>40</y>
+            <width>281</width>
+            <height>22</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_4">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>40</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Primary Key</string>
+          </property>
+         </widget>
+         <widget class="QListWidget" name="fields_list_create_table">
+          <property name="geometry">
+           <rect>
+            <x>340</x>
+            <y>81</y>
+            <width>251</width>
+            <height>131</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QFrame" name="field_input_frame">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>70</y>
+            <width>591</width>
+            <height>231</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(170, 170, 255);
+font: 75 9pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QComboBox" name="field_type_combo_box">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>50</y>
+             <width>151</width>
+             <height>18</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>TEXT</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>INTEGER</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>REAL</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>DATE</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QLabel" name="label_7">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Field type</string>
+           </property>
+          </widget>
+          <widget class="QTextBrowser" name="res_sql_statement">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>80</y>
+             <width>211</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="html">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:9pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_6">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Field title</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="field_title_input">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>10</y>
+             <width>151</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="delete_field_btn">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>330</x>
+             <y>150</y>
+             <width>251</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton:hover
+{
+background-color:rgb(230, 230, 255);
+color: black;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Delete selected field</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="add_field_btn">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>150</y>
+             <width>211</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton:hover
+{
+background-color:rgb(230, 230, 255);
+color: black;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Add field</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_8">
+           <property name="geometry">
+            <rect>
+             <x>280</x>
+             <y>10</y>
+             <width>41</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Fields:</string>
+           </property>
+          </widget>
+         </widget>
+         <zorder>field_input_frame</zorder>
+         <zorder>create_table_push_button</zorder>
+         <zorder>label_2</zorder>
+         <zorder>table_name_line</zorder>
+         <zorder>primaryKeyComboBox</zorder>
+         <zorder>label_4</zorder>
+         <zorder>fields_list_create_table</zorder>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>Edit table</string>
+         </attribute>
+         <widget class="QLabel" name="label_15">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>10</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Table name</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="table_name_line_3">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>10</y>
+            <width>281</width>
+            <height>20</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_16">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>40</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Primary Key</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="primaryKeyComboBox_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>40</y>
+            <width>281</width>
+            <height>22</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QFrame" name="field_input_frame_3">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>70</y>
+            <width>591</width>
+            <height>231</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(170, 170, 255);
+background-color: rgb(255, 158, 126);
+font: 75 9pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QComboBox" name="field_type_combo_box_4">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>70</y>
+             <width>151</width>
+             <height>18</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>TEXT</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>INTEGER</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>REAL</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>DATE</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QLabel" name="label_17">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>70</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Field type</string>
+           </property>
+          </widget>
+          <widget class="QTextBrowser" name="res_sql_statement_4">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>100</y>
+             <width>211</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="html">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:9pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_18">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Field title</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="field_title_input_4">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>10</y>
+             <width>151</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="delete_field_btn_4">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>330</x>
+             <y>150</y>
+             <width>251</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton:hover
+{
+background-color:rgb(230, 230, 255);
+color: black;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Delete selected field</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="add_field_btn_4">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>150</y>
+             <width>211</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton:hover
+{
+background-color:rgb(230, 230, 255);
+color: black;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Add field</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_19">
+           <property name="geometry">
+            <rect>
+             <x>280</x>
+             <y>10</y>
+             <width>41</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Fields:</string>
+           </property>
+          </widget>
+          <widget class="QListWidget" name="fields_list_create_table_3">
+           <property name="geometry">
+            <rect>
+             <x>330</x>
+             <y>10</y>
+             <width>251</width>
+             <height>131</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="update_field_title_btn">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>40</y>
+             <width>151</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton:hover
+{
+background-color:rgb(230, 230, 255);
+color: black;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>update field title</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="update_table_name_btn">
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>10</y>
+            <width>151</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>update table name</string>
+          </property>
+         </widget>
+         <zorder>field_input_frame_3</zorder>
+         <zorder>label_15</zorder>
+         <zorder>table_name_line_3</zorder>
+         <zorder>label_16</zorder>
+         <zorder>primaryKeyComboBox_3</zorder>
+         <zorder>update_table_name_btn</zorder>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="delete_table_btn">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>430</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete selected table</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>803</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
